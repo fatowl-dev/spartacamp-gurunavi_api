@@ -41,7 +41,7 @@ def get_csv_list(res_dic):
     rest_list = []
     for rest_dic in res_dic['rest']:
         access_dic = rest_dic['access']
-        access_str = f'{access_dic["station"]} 徒歩{access_dic["walk"]}分'
+        access_str = f'{access_dic["line"]} {access_dic["station"]} 徒歩{access_dic["walk"]}分'
         csv_str = f'{rest_dic["name"]},{rest_dic["url"]},{access_str}'
         rest_list.append(csv_str)
     return rest_list
