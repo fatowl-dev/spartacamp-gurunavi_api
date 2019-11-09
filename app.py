@@ -13,8 +13,8 @@ import os
 
 
 def main():
-    #search_word = input('フリーワード検索: ')
-    search_word = '牛丼'
+    search_word = input('フリーワード検索: ')
+    #search_word = '牛丼'
 
     res_dic = search_freeword(search_word)
 
