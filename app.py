@@ -4,12 +4,11 @@
         ↓
     次の形式で必要な情報を出力する
     「
-        吉野家,URL,アクセス
-        松屋,URL,アクセス
+        吉野家,URL,〇〇線〇〇駅徒歩〇〇分
+        すき家,URL,〇〇線〇〇駅徒歩〇〇分
 """
 import requests
 import os
-
 
 
 def main():
