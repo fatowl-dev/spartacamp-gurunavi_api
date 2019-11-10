@@ -28,12 +28,8 @@ def main():
 
 
 def display_csv_list(rest_list):
-    count = 0
     for data in rest_list:
         print(data)
-        count += 1
-        if count >= 5:
-            return
 
 
 def search_freeword(search_word):
@@ -41,7 +37,7 @@ def search_freeword(search_word):
     api_url = 'https://api.gnavi.co.jp/RestSearchAPI/v3/'
     search_word = ','.join(search_word.split(' '))
     search_word = urllib.parse.quote(search_word)
-    url_str = f'{api_url}?keyid={key_id}&freeword={search_word}'
+    url_str = f'{api_url}?keyid={key_id}&freeword={search_word}&hit_per_page=5'
     response = requests.get(url_str)
     res_dic = response.json()
     return res_dic
